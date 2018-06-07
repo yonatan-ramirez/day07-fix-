@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+class CarBrand{
+  make= "Ford";
+  year= "1992";
+  model= "Ranger";
+  color= "white";
+  
+}
+console.log(CarBrand);
 
 @Component({
   selector: 'app-root',
