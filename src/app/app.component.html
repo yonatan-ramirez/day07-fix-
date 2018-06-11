@@ -1,1 +1,21 @@
-<p *ngIf ="displayParagraph">Hello World!</p>>
+<p *ngIf ="displayParagraph" [ngStyle]="{'position': 'absolute', 'right':0, 'top':0}">Hello World! This is a paragraph that uses *ngIf</p>
+<!-- if you put brackets around ngStyle (example: [ngStyle]) it will want to search for a name of "ngStyle" which will also confuse the code -->
+
+<!-- how to use string assignment VVVVV -->
+<p [ngClass]="'color-red background-yellow'">This is another Paragraph but that uses Strings</p>
+
+<!-- how to use an array-->
+<p [ngClass]="['color-red', 'background-yellow']">this s a paragraph that has classes addes as an Array</p>
+
+<!-- how to use objects -->
+<p [ngClass]="{'color-red': true, 'background-yellow': true, 'hide-text': displayParagraph}">This is a paragraph that has classes addes as an object</p>
+<!-- when the value is "true" it will be displayed, color-red will display because its true. if its set to false it will not display! -->
+
+
+<!-- how to use ngFor -->
+<ul>
+    <li *ngFor="let user of users">
+        {{user.name}} is {{user.age}} years old
+    </li>
+</ul>
+
